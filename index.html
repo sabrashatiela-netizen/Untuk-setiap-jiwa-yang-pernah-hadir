@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#edf0e5">
+  <meta name="description" content="Ruang kecil berisi surat-surat yang mungkin belum sempat diucapkan. Untuk setiap jiwa yang pernah hadir.">
+  <title>For Every Soul I've Met — Sebuah Ruang untuk Kata-Kata</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Allura&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="For Every Soul, beranda">
+      <span class="brand-mark">✳</span><span>for every soul <small>i've met</small></span>
+    </a>
+    <nav class="nav">
+      <a href="#letters">Surat-surat</a>
+      <a href="#about">Tentang ruang ini</a>
+    </nav>
+    <button class="music-toggle" id="musicToggle" aria-pressed="false" title="Nyalakan musik latar">
+      <span class="music-icon">♫</span><span id="musicLabel">Musik: mati</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> SEBUAH RUANG KECIL UNTUK KATA-KATA</p>
+        <h1>Untuk setiap jiwa<br>yang <em>pernah hadir.</em></h1>
+        <p class="hero-lead">Tidak semua hal baik sempat kita ucapkan. Tidak semua orang tahu bahwa kehadirannya pernah berarti. Jadi, biarkan beberapa kata tinggal di sini—untuk siapa pun yang membutuhkannya.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#letters">Temukan sebuah surat <span>↘</span></a>
+          <button class="text-button" id="randomLetter">Pilihkan untukku <span>✳</span></button>
+        </div>
+        <div class="hero-note"><span class="note-dot"></span> Dibaca perlahan. Tidak perlu terburu-buru.</div>
+      </div>
+      <div class="hero-art" aria-label="Ilustrasi surat dan bunga">
+        <div class="sun-disc"></div>
+        <div class="leaf leaf-one"></div><div class="leaf leaf-two"></div><div class="leaf leaf-three"></div>
+        <div class="paper-shadow"></div>
+        <div class="letter-paper">
+          <div class="paper-top"><span>catatan kecil</span><span>no. 001</span></div>
+          <div class="paper-flower">✿</div>
+          <p>“Barangkali, pernah saling mengenal adalah salah satu bentuk kecil dari keberuntungan.”</p>
+          <div class="paper-sign">dengan tulus,</div>
+          <div class="paper-scribble">seseorang</div>
+        </div>
+        <span class="art-sparkle sparkle-a">✳</span><span class="art-sparkle sparkle-b">✧</span>
+        <div class="art-caption">a little archive of unsaid things</div>
+      </div>
+      <div class="hero-bottom"><span>01 / RUANG UNTUK MERASA</span><span>SCROLL UNTUK MENJELAJAHI ↓</span></div>
+    </section>
+
+    <section class="intro-strip" id="about">
+      <div class="strip-symbol">“</div>
+      <p>Kita tidak harus selalu dekat untuk mengakui bahwa seseorang pernah meninggalkan kebaikan dalam hidup kita.</p>
+      <span class="strip-caption">SEBUAH PENGINGAT KECIL auff</span>
+    </section>
+
+    <section class="letters-section" id="letters">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> THE LETTER ARCHIVE</p>
+          <h2>Mungkin, ada kata<br>yang sedang kamu <em>butuhkan.</em></h2>
+        </div>
+        <p class="section-description">Pilih berdasarkan perasaanmu hari ini. Tidak ada surat yang harus cocok sepenuhnya—ambil bagian yang terasa dekat, tinggalkan yang belum kamu perlukan.</p>
+      </div>
+      <div class="filter-row" id="categoryFilters" aria-label="Filter kategori surat">
+        <button class="filter-chip active" data-category="all">Semua surat <span>08</span></button>
+        <button class="filter-chip" data-category="gratitude">Terima kasih</button>
+        <button class="filter-chip" data-category="distance">Tentang jarak</button>
+        <button class="filter-chip" data-category="apology">Maaf</button>
+        <button class="filter-chip" data-category="encouragement">Saat lelah</button>
+        <button class="filter-chip" data-category="prayer">Doa baik</button>
+        <button class="filter-chip" data-category="goodbye">Perpisahan</button>
+      </div>
+      <div class="letter-grid" id="letterGrid"></div>
+      <p class="no-results" id="noResults" hidden>Belum ada surat dalam kategori ini. Coba kategori lain, ya.</p>
+    </section>
+
+    <section class="closing-note">
+      <div class="closing-decoration">❧</div>
+      <p class="eyebrow">SEBELUM KAMU PERGI</p>
+      <h2>Semoga setelah membaca ini,<br>ada sesuatu yang terasa <em>lebih ringan.</em></h2>
+      <p class="closing-body">Kamu tidak harus menyimpan semua kalimatnya. Cukup bawa satu hal yang kamu perlukan hari ini: rasa syukur, keberanian untuk meminta maaf, atau pengingat bahwa kamu masih boleh bertumbuh pelan-pelan.</p>
+      <button class="button button-light" id="surpriseButton">Buka pesan kecil <span>✳</span></button>
+      <div class="surprise-message" id="surpriseMessage" hidden></div>
+      <div class="closing-signature">dengan doa-doa baik, <span>seseorang yang bersyukur pernah bertemu</span></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">✳</span><span>for every soul <small>i've met</small></span></a>
+    <p>Untuk manusia-manusia baik yang pernah menjadi bagian dari cerita.</p>
+    <a href="#home" class="back-top">Kembali ke atas ↑</a>
+    <div class="footer-bottom"><span>MADE WITH A QUIET HEART</span><span>© <span id="year"></span> — A LITTLE LETTER ARCHIVE</span></div>
+  </footer>
+
+  <div class="letter-modal" id="letterModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <article class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Tutup surat">×</button>
+      <p class="modal-kicker" id="modalCategory">SEBUAH SURAT KECIL</p>
+      <div class="modal-flower">✿</div>
+      <h2 id="modalTitle">Untuk kamu,</h2>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-end">dengan tulus, <span>seseorang yang mendoakanmu</span></div>
+      <div class="modal-actions"><button class="button button-dark" id="copyLetter">Salin surat <span>↗</span></button><button class="text-button" id="modalRandom">Surat lainnya ↗</button></div>
+      <p class="copy-feedback" id="copyFeedback" aria-live="polite"></p>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
